@@ -1,0 +1,26 @@
+//
+//  ViewController.swift
+//  Dominate Forex V1.01
+//
+//  Created by mac on 11/23/19.
+//  Copyright © 2019 mac. All rights reserved.
+//
+
+import UIKit
+
+class ViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+
+
+    @IBAction func logInBtn(_ sender: UIButton) {
+        
+        performSegue(withIdentifier: "toNa", sender: nil)
+        
+        
+    }
+}
+
