@@ -28,21 +28,21 @@ class SignViewController: UIViewController {
         if let uName = userName.text, let uPass = userPassword.text, let uEmail = userEmail.text {
             Auth.auth().createUser(withEmail: uEmail, password: uPass) { (Auth, Err) in
                 if Err != nil {
-                    self.alert(title: "Error", message: Err!.localizedDescription)
+                    K.alert(title: "Error", message: Err!.localizedDescription,vc: self)
                 }
                 else {
                     
                 let ins = ["user name":uName,"user email":uEmail,"user password":uPass] as [String:Any]
                 let db = Firestore.firestore()
-            
-                print(ins)
+                    db.collection("users").addDocument(data: ins)
+                    
                     self.performSegue(withIdentifier: "toNa", sender: nil)
                     
                 }
             }
         }
         else {
-           alert(title: "Error", message: "Please fil all the data")
+            K.alert(title: "Error", message: "Please fil all the data",vc: self)
         }
     }
     
@@ -51,12 +51,4 @@ class SignViewController: UIViewController {
     }
     
     
-    func alert(title:String, message: String){
-        
-        let al=UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-        let ok = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
-        al.addAction(ok)
-        
-        self.present(al, animated: true, completion: nil)
-    }
 }

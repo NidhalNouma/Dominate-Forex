@@ -3,28 +3,45 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		046BF64C2390360700E86FA5 /* Controller in Resources */ = {isa = PBXBuildFile; fileRef = 046BF64B2390360700E86FA5 /* Controller */; };
+		0425CE102392F774003185E0 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0425CE0F2392F774003185E0 /* IQKeyboardManagerSwift */; };
+		046BF6532390477500E86FA5 /* SIgnalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BF64E2390477500E86FA5 /* SIgnalViewController.swift */; };
+		046BF6542390477500E86FA5 /* SignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BF64F2390477500E86FA5 /* SignViewController.swift */; };
+		046BF6552390477500E86FA5 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BF6502390477500E86FA5 /* ChatViewController.swift */; };
+		046BF6562390477500E86FA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BF6512390477500E86FA5 /* ViewController.swift */; };
+		046BF6572390477500E86FA5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BF6522390477500E86FA5 /* MainViewController.swift */; };
+		046BF65C2390783200E86FA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046BF65B2390783200E86FA5 /* LaunchScreen.storyboard */; };
+		046BF6602390789200E86FA5 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BF65E2390789100E86FA5 /* MessageCell.swift */; };
+		046BF66423907B2300E86FA5 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BF66323907B2300E86FA5 /* Message.swift */; };
+		046BF66623907BDA00E86FA5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BF66523907BDA00E86FA5 /* Constants.swift */; };
+		046BF6672390A16300E86FA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046BF65D2390785800E86FA5 /* Main.storyboard */; };
+		04A7E46323916E7000FCD522 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A7E46223916E7000FCD522 /* MessageCell.xib */; };
 		04B64B51239031D900FD9AA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B64B50239031D900FD9AA1 /* AppDelegate.swift */; };
 		04B64B53239031D900FD9AA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B64B52239031D900FD9AA1 /* SceneDelegate.swift */; };
-		04B64B58239031D900FD9AA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B64B56239031D900FD9AA1 /* Main.storyboard */; };
 		04B64B5A239031DA00FD9AA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B64B59239031DA00FD9AA1 /* Assets.xcassets */; };
-		04B64B5D239031DA00FD9AA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B64B5B239031DA00FD9AA1 /* LaunchScreen.storyboard */; };
 		04B64B652390332300FD9AA1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04B64B642390332300FD9AA1 /* GoogleService-Info.plist */; };
 		51CB0EADA0660905BE059BFB /* Pods_Dominate_Forex_V1_02.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229E5A8D1AFCDDA91D1287C6 /* Pods_Dominate_Forex_V1_02.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		046BF64B2390360700E86FA5 /* Controller */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Controller; sourceTree = "<group>"; };
+		046BF64E2390477500E86FA5 /* SIgnalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIgnalViewController.swift; sourceTree = "<group>"; };
+		046BF64F2390477500E86FA5 /* SignViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
+		046BF6502390477500E86FA5 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		046BF6512390477500E86FA5 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		046BF6522390477500E86FA5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		046BF65B2390783200E86FA5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		046BF65D2390785800E86FA5 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		046BF65E2390789100E86FA5 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		046BF66323907B2300E86FA5 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		046BF66523907BDA00E86FA5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		04A7E46223916E7000FCD522 /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MessageCell.xib; path = ../MessageCell.xib; sourceTree = "<group>"; };
 		04B64B4D239031D900FD9AA1 /* Dominate Forex V1.02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dominate Forex V1.02.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B64B50239031D900FD9AA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04B64B52239031D900FD9AA1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		04B64B57239031D900FD9AA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04B64B59239031DA00FD9AA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		04B64B5C239031DA00FD9AA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04B64B5E239031DA00FD9AA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04B64B642390332300FD9AA1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		229E5A8D1AFCDDA91D1287C6 /* Pods_Dominate_Forex_V1_02.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dominate_Forex_V1_02.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,12 +55,45 @@
 			buildActionMask = 2147483647;
 			files = (
 				51CB0EADA0660905BE059BFB /* Pods_Dominate_Forex_V1_02.framework in Frameworks */,
+				0425CE102392F774003185E0 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		046BF64D2390476200E86FA5 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				046BF6502390477500E86FA5 /* ChatViewController.swift */,
+				046BF64E2390477500E86FA5 /* SIgnalViewController.swift */,
+				046BF6522390477500E86FA5 /* MainViewController.swift */,
+				046BF64F2390477500E86FA5 /* SignViewController.swift */,
+				046BF6512390477500E86FA5 /* ViewController.swift */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		046BF6582390768C00E86FA5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				046BF65B2390783200E86FA5 /* LaunchScreen.storyboard */,
+				046BF65D2390785800E86FA5 /* Main.storyboard */,
+				046BF65E2390789100E86FA5 /* MessageCell.swift */,
+				04A7E46223916E7000FCD522 /* MessageCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		046BF66223907B0700E86FA5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				046BF66323907B2300E86FA5 /* Message.swift */,
+				046BF66523907BDA00E86FA5 /* Constants.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		04B64B44239031D900FD9AA1 = {
 			isa = PBXGroup;
 			children = (
@@ -65,11 +115,11 @@
 		04B64B4F239031D900FD9AA1 /* Dominate Forex V1.02 */ = {
 			isa = PBXGroup;
 			children = (
+				046BF66223907B0700E86FA5 /* Models */,
+				046BF6582390768C00E86FA5 /* Views */,
+				046BF64D2390476200E86FA5 /* Control */,
 				04B64B50239031D900FD9AA1 /* AppDelegate.swift */,
 				04B64B52239031D900FD9AA1 /* SceneDelegate.swift */,
-				046BF64B2390360700E86FA5 /* Controller */,
-				04B64B56239031D900FD9AA1 /* Main.storyboard */,
-				04B64B5B239031DA00FD9AA1 /* LaunchScreen.storyboard */,
 				04B64B59239031DA00FD9AA1 /* Assets.xcassets */,
 				04B64B5E239031DA00FD9AA1 /* Info.plist */,
 				04B64B642390332300FD9AA1 /* GoogleService-Info.plist */,
@@ -112,6 +162,9 @@
 			dependencies = (
 			);
 			name = "Dominate Forex V1.02";
+			packageProductDependencies = (
+				0425CE0F2392F774003185E0 /* IQKeyboardManagerSwift */,
+			);
 			productName = "Dominate Forex V1.02";
 			productReference = 04B64B4D239031D900FD9AA1 /* Dominate Forex V1.02.app */;
 			productType = "com.apple.product-type.application";
@@ -140,6 +193,9 @@
 				Base,
 			);
 			mainGroup = 04B64B44239031D900FD9AA1;
+			packageReferences = (
+				0425CE0E2392F774003185E0 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = 04B64B4E239031D900FD9AA1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -154,11 +210,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04B64B5D239031DA00FD9AA1 /* LaunchScreen.storyboard in Resources */,
+				04A7E46323916E7000FCD522 /* MessageCell.xib in Resources */,
+				046BF6672390A16300E86FA5 /* Main.storyboard in Resources */,
 				04B64B652390332300FD9AA1 /* GoogleService-Info.plist in Resources */,
+				046BF65C2390783200E86FA5 /* LaunchScreen.storyboard in Resources */,
 				04B64B5A239031DA00FD9AA1 /* Assets.xcassets in Resources */,
-				04B64B58239031D900FD9AA1 /* Main.storyboard in Resources */,
-				046BF64C2390360700E86FA5 /* Controller in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,31 +267,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				046BF6572390477500E86FA5 /* MainViewController.swift in Sources */,
+				046BF6602390789200E86FA5 /* MessageCell.swift in Sources */,
+				046BF6562390477500E86FA5 /* ViewController.swift in Sources */,
+				046BF66423907B2300E86FA5 /* Message.swift in Sources */,
 				04B64B51239031D900FD9AA1 /* AppDelegate.swift in Sources */,
+				046BF66623907BDA00E86FA5 /* Constants.swift in Sources */,
 				04B64B53239031D900FD9AA1 /* SceneDelegate.swift in Sources */,
+				046BF6532390477500E86FA5 /* SIgnalViewController.swift in Sources */,
+				046BF6552390477500E86FA5 /* ChatViewController.swift in Sources */,
+				046BF6542390477500E86FA5 /* SignViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		04B64B56239031D900FD9AA1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04B64B57239031D900FD9AA1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		04B64B5B239031DA00FD9AA1 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04B64B5C239031DA00FD9AA1 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		04B64B5F239031DA00FD9AA1 /* Debug */ = {
@@ -412,6 +457,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0425CE0E2392F774003185E0 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0425CE0F2392F774003185E0 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0425CE0E2392F774003185E0 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 04B64B45239031D900FD9AA1 /* Project object */;
 }
