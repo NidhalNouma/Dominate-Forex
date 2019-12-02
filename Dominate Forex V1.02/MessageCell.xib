@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Zhl-Sn-ZpF">
-                        <rect key="frame" x="10" y="10" width="453" height="148"/>
+                        <rect key="frame" x="10" y="10" width="453" height="138"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" image="YouAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="kPM-cD-MEl">
                                 <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -54,13 +54,22 @@
                             </imageView>
                         </subviews>
                     </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time 11/33/34  22:11" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGZ-aB-cBg">
+                        <rect key="frame" x="157.5" y="148" width="158" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" red="0.333293438" green="0.33335629109999998" blue="0.33328947419999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <color key="tintColor" red="0.25094899539999999" green="0.25099846720000002" blue="0.2509458363" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="Zhl-Sn-ZpF" secondAttribute="bottom" constant="10" id="6y4-Mf-JPa"/>
+                    <constraint firstAttribute="bottom" secondItem="Zhl-Sn-ZpF" secondAttribute="bottom" constant="20" id="6y4-Mf-JPa"/>
+                    <constraint firstAttribute="bottom" secondItem="fGZ-aB-cBg" secondAttribute="bottom" id="VrG-JF-dH0"/>
                     <constraint firstItem="Zhl-Sn-ZpF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ck7-2e-zX5"/>
+                    <constraint firstItem="fGZ-aB-cBg" firstAttribute="top" secondItem="Zhl-Sn-ZpF" secondAttribute="bottom" id="mAy-7m-1YS"/>
                     <constraint firstAttribute="trailing" secondItem="Zhl-Sn-ZpF" secondAttribute="trailing" constant="10" id="s4v-Kr-ify"/>
+                    <constraint firstItem="fGZ-aB-cBg" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="tL0-FG-jnS"/>
                     <constraint firstItem="Zhl-Sn-ZpF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="tL0-S5-NUn"/>
                 </constraints>
             </tableViewCellContentView>
@@ -70,6 +79,7 @@
                 <outlet property="leftImageView" destination="kPM-cD-MEl" id="CjU-oJ-mKo"/>
                 <outlet property="messageBubble" destination="Cws-oA-B5g" id="knq-TM-UUn"/>
                 <outlet property="rightImageView" destination="5nV-U8-xag" id="4ay-vn-PEu"/>
+                <outlet property="timeLab" destination="fGZ-aB-cBg" id="BGj-kj-Wvh"/>
             </connections>
             <point key="canvasLocation" x="-205.07246376811597" y="162.05357142857142"/>
         </tableViewCell>

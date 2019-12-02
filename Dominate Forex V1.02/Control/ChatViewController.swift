@@ -20,6 +20,8 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //self.messageTxt.becomeFirstResponder()
+        
         tableView.dataSource = self
         tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
         loadMessages()
@@ -40,8 +42,16 @@ class ChatViewController: UIViewController {
                 if let snapshotDocuments = querySnapshot?.documents {
                     for doc in snapshotDocuments {
                         let data = doc.data()
-                        if let messageSender = data[K.FStore.senderField] as? String, let messageBody = data[K.FStore.bodyField] as? String {
-                            let newMessage = Message(sender: messageSender, body: messageBody)
+                        if let messageSender = data[K.FStore.senderField] as? String, let messageBody = data[K.FStore.bodyField] as? String  , let tim = data[K.FStore.dateField] as? Double{
+
+                        let date = Date(timeIntervalSince1970: tim)
+                        let dateFormatter = DateFormatter()
+                        dateFormatter.timeStyle = DateFormatter.Style.medium //Set time style
+                        dateFormatter.dateStyle = DateFormatter.Style.medium //Set date style
+                        dateFormatter.timeZone = .current
+                        let localDate = dateFormatter.string(from: date)
+                            
+                            let newMessage = Message(sender: messageSender, body: messageBody, time: localDate)
                             self.messages.append(newMessage)
                             
                             DispatchQueue.main.async {
@@ -59,6 +69,7 @@ class ChatViewController: UIViewController {
 
     @IBAction func sendPres(_ sender: UIButton) {
         
+        if messageTxt.text != "" {
         if let messageBody = messageTxt.text, let messageSender = Auth.auth().currentUser?.email {
             db.collection(K.FStore.collectionName).addDocument(data: [
                 K.FStore.senderField: messageSender,
@@ -72,8 +83,10 @@ class ChatViewController: UIViewController {
                     
                     DispatchQueue.main.async {
                          self.messageTxt.text = ""
+                         self.view.endEditing(true)
                     }
                 }
+            }
             }
         }
     }
@@ -92,6 +105,7 @@ extension ChatViewController: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageCell
         cell.label.text = message.body
+        cell.timeLab.text = message.time
         
         //This is a message from the current user.
         if message.sender == Auth.auth().currentUser?.email {

@@ -25,7 +25,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="48"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="33"/>
-                                        <textInputTraits key="textInputTraits" textContentType="email"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="center" minimumFontSize="17" background="txtimg" translatesAutoresizingMaskIntoConstraints="NO" id="TrQ-kK-e61">
                                         <rect key="frame" x="0.0" y="101" width="374" height="47"/>
@@ -173,13 +173,19 @@
                                 <rect key="frame" x="20" y="7" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="LogOut"/>
+                                <connections>
+                                    <action selector="logOutt:" destination="BdM-fd-SKc" eventType="touchUpInside" id="bSR-RG-sGT"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toLog" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Mk0-x9-G0e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NaQ-O5-PKH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1757" y="511"/>
+            <point key="canvasLocation" x="1756.521739130435" y="510.9375"/>
         </scene>
         <!--Signal-->
         <scene sceneID="GXK-1j-dAm">
@@ -372,7 +378,7 @@
                                         <rect key="frame" x="0.0" y="77" width="374" height="48"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="33"/>
-                                        <textInputTraits key="textInputTraits" textContentType="email"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="center" minimumFontSize="17" background="txtimg" translatesAutoresizingMaskIntoConstraints="NO" id="mLB-6X-XYO">
                                         <rect key="frame" x="0.0" y="154" width="374" height="47"/>
@@ -436,7 +442,7 @@
         <!--Navigation Controller-->
         <scene sceneID="mRV-Kf-5Zp">
             <objects>
-                <navigationController storyboardIdentifier="navig" automaticallyAdjustsScrollViewInsets="NO" id="Sfo-Jj-BPZ" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navig" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Sfo-Jj-BPZ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="WSn-v5-ajU"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="ePE-DX-3ez">
@@ -466,6 +472,6 @@
         <image name="txtimg" width="386" height="52"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="S0b-gM-Dhk"/>
+        <segue reference="zCJ-RO-61i"/>
     </inferredMetricsTieBreakers>
 </document>

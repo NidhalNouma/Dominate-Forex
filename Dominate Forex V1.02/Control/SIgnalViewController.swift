@@ -21,7 +21,7 @@ class SIgnalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if "nidhal@gmail.com" != Auth.auth().currentUser?.email {
+        if "autoswingexpert@gmail.com" != Auth.auth().currentUser?.email {
             txtF.isHidden = true
             sendB.isHidden = true
         }
@@ -33,7 +33,7 @@ class SIgnalViewController: UIViewController {
     func loadMessages() {
         
         db.collection(K.FStore.signalName)
-            .order(by: K.FStore.dateField)
+            .order(by: K.FStore.dateField, descending: true)
             .addSnapshotListener { (querySnapshot, error) in
             
             self.messages = []
@@ -44,14 +44,22 @@ class SIgnalViewController: UIViewController {
                 if let snapshotDocuments = querySnapshot?.documents {
                     for doc in snapshotDocuments {
                         let data = doc.data()
-                        if let messageSender = data[K.FStore.senderField] as? String, let messageBody = data[K.FStore.bodyField] as? String {
-                            let newMessage = Message(sender: messageSender, body: messageBody)
+                        if let messageSender = data[K.FStore.senderField] as? String, let messageBody = data[K.FStore.bodyField] as? String , let tim = data[K.FStore.dateField] as? Double{
+
+                            let date = Date(timeIntervalSince1970: tim)
+                            let dateFormatter = DateFormatter()
+                            dateFormatter.timeStyle = DateFormatter.Style.medium //Set time style
+                            dateFormatter.dateStyle = DateFormatter.Style.medium //Set date style
+                            dateFormatter.timeZone = .current
+                            let localDate = dateFormatter.string(from: date)
+                            
+                            let newMessage = Message(sender: messageSender, body: messageBody, time: String(localDate))
                             self.messages.append(newMessage)
                             
                             DispatchQueue.main.async {
                                    self.tableV.reloadData()
-                                let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
-                                self.tableV.scrollToRow(at: indexPath, at: .top, animated: false)
+//                                let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
+//                                self.tableV.scrollToRow(at: indexPath, at: .top, animated: false)
                             }
                         }
                     }
@@ -62,7 +70,7 @@ class SIgnalViewController: UIViewController {
     
 
     @IBAction func sendPr(_ sender: UIButton) {
-        
+        if txtF.text != "" {
         if let messageBody = txtF.text, let messageSender = Auth.auth().currentUser?.email {
                    db.collection(K.FStore.signalName).addDocument(data: [
                        K.FStore.senderField: messageSender,
@@ -76,10 +84,12 @@ class SIgnalViewController: UIViewController {
                            
                            DispatchQueue.main.async {
                                 self.txtF.text = ""
+                            self.view.endEditing(true)
                            }
                        }
                    }
                }
+        }
     }
     
 }
@@ -95,6 +105,7 @@ extension SIgnalViewController: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageCell
         cell.label.text = message.body
+        cell.timeLab.text = message.time
         
         //This is a message from the current user.
             cell.leftImageView.isHidden = true

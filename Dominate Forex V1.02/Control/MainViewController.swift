@@ -19,14 +19,20 @@ class MainViewController: UIViewController {
     }
     
 
-    func logout(_ sender: Any) {
+    func logout() {
         do {
             try Auth.auth().signOut()
-           // performSegue(withIdentifier: "toLog", sender: nil)
+            performSegue(withIdentifier: "toLog", sender: nil)
+            print("Try to signout")
+            //self.dismiss(animated: true, completion: nil)
         }
         catch {
             print("signout error")
         }
     }
     
+    
+    @IBAction func logOutt(_ sender: Any) {
+        logout()
+    }
 }
