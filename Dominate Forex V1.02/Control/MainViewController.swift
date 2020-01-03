@@ -10,9 +10,16 @@ import UIKit
 import Firebase
 
 class MainViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var chatBtn: UIButton!
+    @IBOutlet weak var signalBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        chatBtn.layer.cornerRadius = 20
+        signalBtn.layer.cornerRadius = 20
 
         let backButton = UIBarButtonItem(title: "", style: UIBarButtonItem.Style.plain, target: self, action: nil)
                navigationItem.backBarButtonItem = backButton

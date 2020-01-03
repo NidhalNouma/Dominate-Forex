@@ -9,6 +9,8 @@ target 'Dominate Forex V1.02' do
 
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'Firebase/Storage'
+  pod 'SDWebImage'
 
 
 end

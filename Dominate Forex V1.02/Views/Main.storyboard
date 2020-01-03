@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -180,6 +180,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="chatBtn" destination="DSy-XI-aCB" id="tlk-er-HRr"/>
+                        <outlet property="signalBtn" destination="BTd-5d-PBB" id="wfa-nV-Ib7"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="toLog" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Mk0-x9-G0e"/>
                     </connections>
                 </viewController>
@@ -206,8 +208,17 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="QsK-pg-46s">
                                 <rect key="frame" x="20" y="735" width="374" height="34"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBy-Wh-M4d">
+                                        <rect key="frame" x="0.0" y="0.0" width="24" height="34"/>
+                                        <state key="normal" image="photo" catalog="system">
+                                            <color key="titleColor" red="0.37078052760000002" green="0.48190623519999998" blue="0.82216244940000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="imgChoose:" destination="Vt6-NW-SYr" eventType="touchUpInside" id="fqG-W7-fh7"/>
+                                        </connections>
+                                    </button>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1ud-Es-kfJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="334.5" height="34"/>
+                                        <rect key="frame" x="43" y="0.0" width="291.5" height="34"/>
                                         <color key="backgroundColor" red="0.19607843459999999" green="0.34117648010000001" blue="0.1019607857" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -241,14 +252,72 @@
                     </view>
                     <navigationItem key="navigationItem" title="Signal" id="aeY-qT-okt"/>
                     <connections>
+                        <outlet property="imgP" destination="zBy-Wh-M4d" id="k1j-90-uue"/>
                         <outlet property="sendB" destination="ksS-fK-VmM" id="KJU-Hu-1cd"/>
                         <outlet property="tableV" destination="b5q-2E-ZSH" id="znU-tM-Go5"/>
                         <outlet property="txtF" destination="1ud-Es-kfJ" id="QrW-tX-sBq"/>
+                        <segue destination="0Qb-Xc-Ue9" kind="show" identifier="toImg" id="4wF-Ta-P20"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tlY-eR-cGa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2537.68115942029" y="829.6875"/>
+        </scene>
+        <!--Img View Controller-->
+        <scene sceneID="U1j-Xc-WyF">
+            <objects>
+                <viewController id="0Qb-Xc-Ue9" customClass="ImgViewController" customModule="Dominate_Forex_V1_02" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="om7-lY-CzX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="10" translatesAutoresizingMaskIntoConstraints="NO" id="Eg3-84-F76">
+                                <rect key="frame" x="0.0" y="20" width="414" height="788"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="92d-ue-o4A">
+                                        <rect key="frame" x="20" y="20" width="374" height="758"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background1" translatesAutoresizingMaskIntoConstraints="NO" id="Zvq-BO-mgJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="758"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="758" id="U7s-Rq-k6Z"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="92d-ue-o4A" secondAttribute="trailing" constant="20" symbolic="YES" id="2cd-NJ-nRy"/>
+                                    <constraint firstAttribute="bottom" secondItem="92d-ue-o4A" secondAttribute="bottom" id="3Aj-ob-tjL"/>
+                                    <constraint firstItem="92d-ue-o4A" firstAttribute="leading" secondItem="Eg3-84-F76" secondAttribute="leading" constant="20" symbolic="YES" id="E5g-hG-AXv"/>
+                                    <constraint firstItem="92d-ue-o4A" firstAttribute="width" secondItem="9lA-de-bgL" secondAttribute="width" multiplier="0.903382" id="Gl0-dF-nxw"/>
+                                    <constraint firstItem="92d-ue-o4A" firstAttribute="top" secondItem="Eg3-84-F76" secondAttribute="top" constant="20" symbolic="YES" id="NWs-C0-d3l"/>
+                                    <constraint firstItem="92d-ue-o4A" firstAttribute="centerX" secondItem="Eg3-84-F76" secondAttribute="centerX" id="PMx-VJ-NRa"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="nj4-bx-n1I"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="9lA-de-bgL"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Eg3-84-F76" secondAttribute="bottom" id="36f-Z1-yoc"/>
+                            <constraint firstItem="Eg3-84-F76" firstAttribute="top" secondItem="om7-lY-CzX" secondAttribute="top" constant="20" symbolic="YES" id="569-UE-DhX"/>
+                            <constraint firstItem="Eg3-84-F76" firstAttribute="leading" secondItem="Gba-yW-uHT" secondAttribute="leading" id="6VQ-XT-trJ"/>
+                            <constraint firstItem="Eg3-84-F76" firstAttribute="trailing" secondItem="Gba-yW-uHT" secondAttribute="trailing" id="fbG-k3-wBI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Gba-yW-uHT"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Svg-PU-P0C"/>
+                    <connections>
+                        <outlet property="imgL" destination="Zvq-BO-mgJ" id="1WC-Zg-DOO"/>
+                        <outlet property="scrolV" destination="Eg3-84-F76" id="fnC-8y-fxp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KPk-Sc-mq4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3395.652173913044" y="828.34821428571422"/>
         </scene>
         <!--Chat-->
         <scene sceneID="yiY-ic-RQV">
@@ -469,6 +538,7 @@
         <image name="Loginbutton" width="427" height="96"/>
         <image name="Paypalicon" width="122" height="31"/>
         <image name="paperplane" catalog="system" width="64" height="60"/>
+        <image name="photo" catalog="system" width="64" height="46"/>
         <image name="txtimg" width="386" height="52"/>
     </resources>
     <inferredMetricsTieBreakers>

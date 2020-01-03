@@ -18,6 +18,7 @@
 		046BF66423907B2300E86FA5 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BF66323907B2300E86FA5 /* Message.swift */; };
 		046BF66623907BDA00E86FA5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BF66523907BDA00E86FA5 /* Constants.swift */; };
 		046BF6672390A16300E86FA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046BF65D2390785800E86FA5 /* Main.storyboard */; };
+		049A953123BEE75A0031A7A5 /* ImgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049A953023BEE75A0031A7A5 /* ImgViewController.swift */; };
 		04A7E46323916E7000FCD522 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A7E46223916E7000FCD522 /* MessageCell.xib */; };
 		04B64B51239031D900FD9AA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B64B50239031D900FD9AA1 /* AppDelegate.swift */; };
 		04B64B53239031D900FD9AA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B64B52239031D900FD9AA1 /* SceneDelegate.swift */; };
@@ -37,6 +38,7 @@
 		046BF65E2390789100E86FA5 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		046BF66323907B2300E86FA5 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		046BF66523907BDA00E86FA5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		049A953023BEE75A0031A7A5 /* ImgViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgViewController.swift; sourceTree = "<group>"; };
 		04A7E46223916E7000FCD522 /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MessageCell.xib; path = ../MessageCell.xib; sourceTree = "<group>"; };
 		04B64B4D239031D900FD9AA1 /* Dominate Forex V1.02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dominate Forex V1.02.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B64B50239031D900FD9AA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				046BF6522390477500E86FA5 /* MainViewController.swift */,
 				046BF64F2390477500E86FA5 /* SignViewController.swift */,
 				046BF6512390477500E86FA5 /* ViewController.swift */,
+				049A953023BEE75A0031A7A5 /* ImgViewController.swift */,
 			);
 			path = Control;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				046BF66423907B2300E86FA5 /* Message.swift in Sources */,
 				04B64B51239031D900FD9AA1 /* AppDelegate.swift in Sources */,
 				046BF66623907BDA00E86FA5 /* Constants.swift in Sources */,
+				049A953123BEE75A0031A7A5 /* ImgViewController.swift in Sources */,
 				04B64B53239031D900FD9AA1 /* SceneDelegate.swift in Sources */,
 				046BF6532390477500E86FA5 /* SIgnalViewController.swift in Sources */,
 				046BF6552390477500E86FA5 /* ChatViewController.swift in Sources */,

@@ -26,6 +26,7 @@ struct K {
         static let senderField = "sender"
         static let bodyField = "body"
         static let dateField = "date"
+        static let imgm = "image"
     }
     static func alert(title:String, message: String, vc:UIViewController){
         

@@ -51,7 +51,7 @@ class ChatViewController: UIViewController {
                         dateFormatter.timeZone = .current
                         let localDate = dateFormatter.string(from: date)
                             
-                            let newMessage = Message(sender: messageSender, body: messageBody, time: localDate)
+                            let newMessage = Message(sender: messageSender, body: messageBody, time: localDate, img: "")
                             self.messages.append(newMessage)
                             
                             DispatchQueue.main.async {
@@ -104,9 +104,9 @@ extension ChatViewController: UITableViewDataSource {
         let message = messages[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageCell
+        cell.hightImg.constant = 0
         cell.label.text = message.body
         cell.timeLab.text = message.time
-        
         //This is a message from the current user.
         if message.sender == Auth.auth().currentUser?.email {
             cell.leftImageView.isHidden = true
@@ -121,7 +121,6 @@ extension ChatViewController: UITableViewDataSource {
         cell.messageBubble.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
         cell.label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         }
-        
       
       
         return cell
